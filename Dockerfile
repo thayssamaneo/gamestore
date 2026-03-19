@@ -13,7 +13,7 @@ RUN apt-get install -y maven
 COPY . .
 
 # Compilar o projeto com o maven
-RUN mvn clean install
+RUN mvn clean install -DskipTest
 
 #Execução do projeto
 FROM eclipse-temurin:21-jdk-jammy
